@@ -2,6 +2,9 @@ package com.example.drones.domain;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "drones")
 public class Drone {
@@ -13,6 +16,8 @@ public class Drone {
     private Double weightLimit;
     private Double batteryCapacity;
     private State state;
+    @OneToMany(mappedBy = "drone", fetch = FetchType.LAZY)
+    private Set<Medication> medications = new HashSet<>();
 
     public Drone() {
     }
