@@ -1,12 +1,10 @@
 package com.example.drones.service;
 
 import com.example.drones.domain.Drone;
-import com.example.drones.domain.Medication;
 import com.example.drones.repository.DroneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
